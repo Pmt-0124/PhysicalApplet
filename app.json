@@ -1,0 +1,44 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "物院资料平台",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle":"dark"
+  },
+  "tabBar": {
+      "backgroundColor": " #FCFCFC",
+      "selectedColor": "#297AFF",
+      "borderStyle":"white",
+      "list":[
+          {
+              "text": "首页",
+              "pagePath": "pages/index/index",
+              "iconPath": "/assets/首页.png",
+              "selectedIconPath": "/assets/首页active.png"
+          },
+          {
+            "text": "文档",
+            "pagePath": "pages/list/list",
+            "iconPath": "/assets/文档.png",
+            "selectedIconPath": "/assets/文档active.png"
+          },    
+          {
+            "text": "我的",
+            "pagePath": "pages/profile/profile",
+            "iconPath": "/assets/我的.png",
+            "selectedIconPath": "/assets/我的active.png"
+          }
+      ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
