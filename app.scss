@@ -1,10 +1,2 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+//在导入样式文件以后，必须以分号结尾，否则会出现异常
+@import "./iconfont/iconfont.scss";
