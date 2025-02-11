@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="title">帮助中心</view>
+  
+  <view class="section">
+    <view class="subtitle">如何使用本小程序</view>
+    <text class="content">1. 点击首页商品浏览\n2. 选择商品加入购物车\n3. 进入购物车结算</text>
+  </view>
+
+  <view class="section">
+    <view class="subtitle">常见问题</view>
+    <text class="content">Q: 如何退款？\nA: 进入订单详情申请售后</text>
+  </view>
+</view>

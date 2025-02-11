@@ -1,1 +1,68 @@
-/* pages/profile/profile.wxss */
+.user-section {
+  padding: 40rpx;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  .auth-btn {
+    margin-right: 30rpx;
+    background: #07c160;
+    color: white;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    .avatar {
+      width: 120rpx;
+      height: 120rpx;
+      border-radius: 50%;
+      margin-right: 30rpx;
+    }
+    .nickname {
+      font-size: 36rpx;
+    }
+  }
+}
+
+.order-section, .service-section {
+  margin: 30rpx;
+  background: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  
+  .section-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-bottom: 40rpx;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .order-status {
+    display: flex;
+    justify-content: space-around;
+    .status-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      image {
+        width: 80rpx;
+        height: 80rpx;
+        margin-bottom: 20rpx;
+      }
+    }
+  }
+  
+  .service-list {
+    .service-item {
+      padding: 30rpx 0;
+      display: flex;
+      align-items: center;
+      border-bottom: 1rpx solid #eee;
+      image {
+        width: 48rpx;
+        height: 48rpx;
+        margin-right: 20rpx;
+      }
+    }
+  }
+}

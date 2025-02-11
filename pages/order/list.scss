@@ -1,0 +1,47 @@
+.container {
+  padding: 30rpx;
+}
+
+.header {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30rpx;
+}
+
+.filter-item {
+  padding: 20rpx;
+  color: #666;
+}
+
+.filter-item.active {
+  color: #07c160;
+  border-bottom: 4rpx solid #07c160;
+}
+
+.order-list {
+  margin-top: 20rpx;
+}
+
+.order-item {
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+}
+
+.order-id, .order-price, .order-status {
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.actions button {
+  margin-top: 20rpx;
+  background: #07c160;
+  color: white;
+}

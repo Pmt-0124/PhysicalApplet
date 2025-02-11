@@ -1,0 +1,16 @@
+<view class="container">
+  <!-- 聊天记录 -->
+  <scroll-view class="chat-area" scroll-y>
+    <block wx:for="{{messages}}" wx:key="time">
+      <view class="message {{item.isUser ? 'user' : 'service'}}">
+        {{item.content}}
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 输入框 -->
+  <view class="input-area">
+    <input placeholder="输入消息" bindinput="onInput" value="{{inputMsg}}"/>
+    <button bindtap="sendMessage">发送</button>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="header">全部订单</view>
+
+  <!-- 订单筛选栏 -->
+  <view class="filter-bar">
+    <view 
+      class="filter-item {{activeFilter === 'all' ? 'active' : ''}}" 
+      bindtap="changeFilter" 
+      data-type="all"
+    >
+      全部
+    </view>
+    <view 
+      class="filter-item {{activeFilter === 'pending' ? 'active' : ''}}" 
+      bindtap="changeFilter" 
+      data-type="pending"
+    >
+      待付款
+    </view>
+    <view 
+      class="filter-item {{activeFilter === 'completed' ? 'active' : ''}}" 
+      bindtap="changeFilter" 
+      data-type="completed"
+    >
+      已完成
+    </view>
+    <view 
+      class="filter-item {{activeFilter === 'after-sale' ? 'active' : ''}}" 
+      bindtap="changeFilter" 
+      data-type="after-sale"
+    >
+      售后
+    </view>
+  </view>
+
+  <!-- 订单列表 -->
+  <view class="order-list">
+    <block wx:for="{{orders}}" wx:key="id">
+      <view class="order-item">
+        <text class="order-id">订单号：{{item.id}}</text>
+        <text class="order-price">金额：{{item.price}}元</text>
+        <text class="order-status">状态：{{item.status}}</text>
+        <view class="actions">
+          <button wx:if="{{item.status === '待付款'}}" bindtap="handlePay" data-id="{{item.id}}">立即支付</button>
+          <button wx:if="{{item.status === '已完成'}}" bindtap="handleRefund" data-id="{{item.id}}">申请售后</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

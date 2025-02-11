@@ -1,0 +1,15 @@
+<!-- 页面标题 -->
+<view class="container">
+  <view class="header">待付款订单</view>
+
+  <!-- 订单列表 -->
+  <view class="order-list">
+    <block wx:for="{{pendingOrders}}" wx:key="id">
+      <view class="order-item">
+        <text class="order-id">订单号：{{item.id}}</text>
+        <text class="order-price">金额：{{item.price}}元</text>
+        <button class="pay-btn" bindtap="handlePay" data-id="{{item.id}}">立即支付</button>
+      </view>
+    </block>
+  </view>
+</view>

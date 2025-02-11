@@ -1,0 +1,28 @@
+.chat-area {
+  height: 80vh;
+  padding: 20rpx;
+}
+
+.message {
+  max-width: 70%;
+  padding: 20rpx;
+  margin: 10rpx;
+  border-radius: 10rpx;
+}
+
+.user {
+  background: #07c160;
+  color: white;
+  margin-left: auto;
+}
+
+.service {
+  background: #f0f0f0;
+  margin-right: auto;
+}
+
+.input-area {
+  display: flex;
+  padding: 20rpx;
+  border-top: 1rpx solid #eee;
+}

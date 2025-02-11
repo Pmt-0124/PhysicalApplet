@@ -1,2 +1,65 @@
-<!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<!-- 顶部登录注册区域 -->
+<view class="user-section">
+  <button wx:if="{{!isLogin}}" class="auth-btn" bindtap="handleLogin">登录</button>
+  <button wx:if="{{!isLogin}}" class="auth-btn" bindtap="handleRegister">注册</button>
+  <view wx:else class="user-info">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+</view>
+  
+<!-- 订单状态区域 -->
+<view class="order-section">
+  <view class="section-title">
+    <text>我的订单</text>
+    <navigator url="/pages/order/list" class="view-all">查看全部 ></navigator>
+  </view>
+  <view class="order-status">
+  <!-- 待付款：跳转到待付款页面 -->
+  <navigator 
+    class="status-item" 
+    url="/pages/order/pending"
+  >
+    <image src="/assets/icon-payment.png"></image>
+    <text>待付款</text>
+  </navigator>
+
+  <!-- 已完成：跳转到已完成页面 -->
+  <navigator 
+    class="status-item" 
+    url="/pages/order/completed"
+  >
+    <image src="/assets/icon-completed.png"></image>
+    <text>已完成</text>
+  </navigator>
+
+  <!-- 售后：跳转到聊天界面 -->
+  <navigator 
+    class="status-item" 
+    url="/pages/service/chat"
+  >
+    <image src="/assets/icon-after-sale.png"></image>
+    <text>售后</text>
+  </navigator>
+</view>
+</view>
+
+
+<!-- 我的服务区域 -->
+<view class="service-section">
+  <view class="section-title">我的服务</view>
+  <view class="service-list">
+    <navigator class="service-item" url="/pages/profile/edit">
+      <image src="/assets/icon-edit.png"></image>
+      <text>修改个人资料</text>
+    </navigator>
+    <navigator class="service-item" url="/pages/help/center">
+      <image src="/assets/icon-help.png"></image>
+      <text>帮助中心</text>
+    </navigator>
+    <view class="service-item" bindtap="makePhoneCall">
+      <image src="/assets/icon-contact.png"></image>
+      <text>联系方式</text>
+    </view>
+  </view>
+</view>

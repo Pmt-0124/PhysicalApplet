@@ -3,7 +3,12 @@
   "pages": [
     "pages/index/index",
     "pages/list/list",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/order/list",
+    "pages/order/pending",
+    "pages/order/completed",
+    "pages/service/chat",
+    "pages/help/center"
   ],
   "window": {
     "navigationBarTitleText": "物院资料平台",

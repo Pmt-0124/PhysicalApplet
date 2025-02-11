@@ -1,0 +1,29 @@
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="header">已完成订单</view>
+
+  <!-- 订单列表 -->
+  <view class="order-list">
+    <block wx:for="{{completedOrders}}" wx:key="id">
+      <view class="order-item">
+        <!-- 订单基本信息 -->
+        <view class="order-info">
+          <text class="order-id">订单号：{{item.id}}</text>
+          <text class="order-price">金额：{{item.price}}元</text>
+        </view>
+
+        <!-- 订单状态和时间 -->
+        <view class="order-status">
+          <text class="status-text">已完成</text>
+          <text class="status-time">{{item.time}}</text>
+        </view>
+
+        <!-- 操作按钮 -->
+        <view class="order-actions">
+          <button class="action-btn" bindtap="viewDetail" data-id="{{item.id}}">查看详情</button>
+          <button class="action-btn" bindtap="buyAgain" data-id="{{item.id}}">再次购买</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
